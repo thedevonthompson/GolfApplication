@@ -23,5 +23,11 @@ namespace GolfApp
 
         }
 
+        public User(string username, string password)
+        {
+            this.Username = username;
+            this.Password = password;
+        }
+
     }
 }
