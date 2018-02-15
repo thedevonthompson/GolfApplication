@@ -15,9 +15,9 @@ namespace GolfApp
         public int GameId { get; set; }
         [Required]
         public User UserId { get; set; }
-        public int Hole1 { get; set; }
-        public int Game2 { get; set; }
-        public int Game3 { get; set; }
+        public Hole Hole1 { get; set; }
+        public int Hole2 { get; set; }
+        public int Hole3 { get; set; }
         public int Game4 { get; set; }
         public int Game5 { get; set; }
         public int Game6 { get; set; }
