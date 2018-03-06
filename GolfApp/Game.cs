@@ -8,31 +8,13 @@ using System.Threading.Tasks;
 
 namespace GolfApp
 {
-    [Table("Game")]
+    [Table("Games")]
     public class Game
     {
         [Key]
         public int GameId { get; set; }
         [Required]
-        public User UserId { get; set; }
-        public Hole Hole1 { get; set; }
-        public int Hole2 { get; set; }
-        public int Hole3 { get; set; }
-        public int Game4 { get; set; }
-        public int Game5 { get; set; }
-        public int Game6 { get; set; }
-        public int Game7 { get; set; }
-        public int Game8 { get; set; }
-        public int Game9 { get; set; }
-        public int Game10 { get; set; }
-        public int Game11 { get; set; }
-        public int Game12 { get; set; }
-        public int Game13 { get; set; }
-        public int Game14 { get; set; }
-        public int Game15 { get; set; }
-        public int Game16 { get; set; }
-        public int Game17 { get; set; }
-        public int Game18 { get; set; }
+        public List<Hole> Holes { get; set; }
         public int? currHole { get; set; }
 
         public Game()

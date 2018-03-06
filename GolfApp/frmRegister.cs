@@ -16,5 +16,24 @@ namespace GolfApp
         {
             InitializeComponent();
         }
+
+        private void btnSaveUser_Click(object sender, EventArgs e)
+        {
+            GolfDB db = new GolfDB();
+
+            User user = new User();
+
+            user.Username = txtUsername.Text;
+            user.Password = txtPassword.Text;
+
+            db.Users.Add(user);
+            if(db.SaveChanges() == 1)
+            {
+                MessageBox.Show("User saved!");
+            }
+            
+
+        }
     }
 }
+ 

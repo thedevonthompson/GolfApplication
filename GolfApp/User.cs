@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GolfApp
 {
-    [Table("User")]
+    [Table("Users")]
     public class User
     {
         [Key]
@@ -17,6 +17,7 @@ namespace GolfApp
         public string Username { get; set; }
         [Required]
         public string Password { get; set; }
+        public List<Game> Games { get; set; }
 
         public User()
         {

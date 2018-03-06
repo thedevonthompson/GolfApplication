@@ -16,6 +16,12 @@ namespace GolfApp
         {
             InitializeComponent();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            frmRegister form = new frmRegister();
+            form.ShowDialog();
+        }
     }
 
 
