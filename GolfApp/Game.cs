@@ -16,23 +16,23 @@ namespace GolfApp
         [Required]
         public User UserId { get; set; }
         public Hole Hole1 { get; set; }
-        public int Hole2 { get; set; }
-        public int Hole3 { get; set; }
-        public int Game4 { get; set; }
-        public int Game5 { get; set; }
-        public int Game6 { get; set; }
-        public int Game7 { get; set; }
-        public int Game8 { get; set; }
-        public int Game9 { get; set; }
-        public int Game10 { get; set; }
-        public int Game11 { get; set; }
-        public int Game12 { get; set; }
-        public int Game13 { get; set; }
-        public int Game14 { get; set; }
-        public int Game15 { get; set; }
-        public int Game16 { get; set; }
-        public int Game17 { get; set; }
-        public int Game18 { get; set; }
+        public Hole Hole2 { get; set; }
+        public Hole Hole3 { get; set; }
+        public Hole Hole4 { get; set; }
+        public Hole Hole5 { get; set; }
+        public Hole Hole6 { get; set; }
+        public Hole Hole7 { get; set; }
+        public Hole Hole8 { get; set; }
+        public Hole Hole9 { get; set; }
+        public Hole Hole10 { get; set; }
+        public Hole Hole11 { get; set; }
+        public Hole Hole12 { get; set; }
+        public Hole Hole13 { get; set; }
+        public Hole Hole14 { get; set; }
+        public Hole Hole15 { get; set; }
+        public Hole Hole16 { get; set; }
+        public Hole Hole17 { get; set; }
+        public Hole Hole18 { get; set; }
         public int? currHole { get; set; }
 
         public Game()
