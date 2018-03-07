@@ -21,19 +21,28 @@ namespace GolfApp
         {
             GolfDB db = new GolfDB();
 
+            //create user to be saved
             User user = new User();
 
-            user.Username = txtUsername.Text;
-            user.Password = txtPassword.Text;
 
-            db.Users.Add(user);
-            if(db.SaveChanges() == 1)
+            //check to see if user is already present by username
+            User testUser = DBHelper.GetUserByUsername(txtUsername.Text);
+            if (testUser == null)
             {
-                MessageBox.Show("User saved!");
+                db.Users.Add(user);
+                if (db.SaveChanges() == 1)
+                {
+                    MessageBox.Show("User saved!");
+                }
             }
-            
+            else
+            {
+                MessageBox.Show("User already exists!");
+            }
+
+
+
 
         }
     }
 }
- 
