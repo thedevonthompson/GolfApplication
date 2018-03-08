@@ -19,8 +19,30 @@ namespace GolfApp
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            //open register form
             frmRegister form = new frmRegister();
             form.ShowDialog();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //Alright, let's log in
+            User currentUser = DBHelper.GetUserByUsername(txtUsername.Text);
+            if(currentUser == null)
+            {
+                MessageBox.Show("That user was not found");
+            }
+            else if(currentUser.Password != txtPassword.Text)
+            {
+                MessageBox.Show("That password is incorrect");
+            }
+            else
+            {
+                frmHome home = new frmHome(currentUser);
+                home.ShowDialog();
+                this.Close();
+            }
+
         }
     }
 

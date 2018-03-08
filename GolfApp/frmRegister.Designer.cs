@@ -33,6 +33,7 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSaveUser = new System.Windows.Forms.Button();
+            this.btnBackToLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,18 +78,29 @@
             this.btnSaveUser.UseVisualStyleBackColor = true;
             this.btnSaveUser.Click += new System.EventHandler(this.btnSaveUser_Click);
             // 
+            // btnBackToLogin
+            // 
+            this.btnBackToLogin.Location = new System.Drawing.Point(89, 197);
+            this.btnBackToLogin.Name = "btnBackToLogin";
+            this.btnBackToLogin.Size = new System.Drawing.Size(108, 33);
+            this.btnBackToLogin.TabIndex = 6;
+            this.btnBackToLogin.Text = "Back to Login";
+            this.btnBackToLogin.UseVisualStyleBackColor = true;
+            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnBackToLogin);
             this.Controls.Add(this.btnSaveUser);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmRegister";
-            this.Text = "frmRegister";
+            this.Text = "r3";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,5 +113,6 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnSaveUser;
+        private System.Windows.Forms.Button btnBackToLogin;
     }
 }

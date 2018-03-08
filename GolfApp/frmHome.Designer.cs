@@ -40,6 +40,7 @@
             this.btnPastGames.TabIndex = 0;
             this.btnPastGames.Text = "See Old Games";
             this.btnPastGames.UseVisualStyleBackColor = true;
+            this.btnPastGames.Click += new System.EventHandler(this.btnPastGames_Click);
             // 
             // btnNewGame
             // 

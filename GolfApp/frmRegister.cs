@@ -29,7 +29,10 @@ namespace GolfApp
             User testUser = DBHelper.GetUserByUsername(txtUsername.Text);
             if (testUser == null)
             {
-                db.Users.Add(user);
+                testUser.Username = txtUsername.Text;
+                testUser.Password = txtPassword.Text;
+
+                db.Users.Add(testUser);
                 if (db.SaveChanges() == 1)
                 {
                     MessageBox.Show("User saved!");
@@ -39,10 +42,15 @@ namespace GolfApp
             {
                 MessageBox.Show("User already exists!");
             }
+            
+    
 
 
+        }
 
-
+        private void btnBackToLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

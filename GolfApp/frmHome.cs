@@ -21,8 +21,14 @@ namespace GolfApp
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            //create a new game instance
             Game g = new Game();
+
+        }
+
+        private void btnPastGames_Click(object sender, EventArgs e)
+        {
+            frmOldGames frm = new frmOldGames(u);
+            frm.ShowDialog();
 
         }
     }
