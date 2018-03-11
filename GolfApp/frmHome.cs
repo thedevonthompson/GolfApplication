@@ -21,8 +21,8 @@ namespace GolfApp
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            Game g = new Game();
-
+            frmNewGame frm = new frmNewGame(u);
+            frm.ShowDialog();
         }
 
         private void btnPastGames_Click(object sender, EventArgs e)

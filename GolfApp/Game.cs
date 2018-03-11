@@ -39,5 +39,32 @@ namespace GolfApp
         {
 
         }
+
+        public static Game GetNewGame()
+        {
+            Game g = new Game();
+            Random rand = new Random();
+            g.Hole1.Par = rand.Next(3, 6);
+            g.Hole2.Par = rand.Next(3, 6);
+            g.Hole3.Par = rand.Next(3, 6);
+            g.Hole4.Par = rand.Next(3, 6);
+            g.Hole5.Par = rand.Next(3, 6);
+            g.Hole6.Par = rand.Next(3, 6);
+            g.Hole7.Par = rand.Next(3, 6);
+            g.Hole7.Par = rand.Next(3, 6);
+            g.Hole8.Par = rand.Next(3, 6);
+            g.Hole9.Par = rand.Next(3, 6);
+            g.Hole10.Par = rand.Next(3, 6);
+            g.Hole11.Par = rand.Next(3, 6);
+            g.Hole12.Par = rand.Next(3, 6);
+            g.Hole13.Par = rand.Next(3, 6);
+            g.Hole14.Par = rand.Next(3, 6);
+            g.Hole15.Par = rand.Next(3, 6);
+            g.Hole16.Par = rand.Next(3, 6);
+            g.Hole17.Par = rand.Next(3, 6);
+            g.Hole18.Par = rand.Next(3, 6);
+
+            return g;
+        }
     }
 }

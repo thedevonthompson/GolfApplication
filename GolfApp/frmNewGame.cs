@@ -13,21 +13,23 @@ namespace GolfApp
     public partial class frmNewGame : Form
     {
         //create an empty game object
-        Game game;
+        Game game = new Game();
         //create an empty user object
-        User user;
+        User user = new User();
 
         //open new game form, pass the game and user in
-        public frmNewGame(User u, Game g)
+        public frmNewGame(User u)
         {
             InitializeComponent();
-            this.game = g;
+            this.user = u;
+
         }
 
         private void frmNewGame_Load(object sender, EventArgs e)
         {
             //set the current hole to the 1st one
             game.currHole = 1;
+            labHole.Text = $"Hole: {game.currHole}";
         }
 
         private void UpdateForm()
@@ -43,7 +45,7 @@ namespace GolfApp
                 btnNext.Visible = false;
                 btnFinishGame.Visible = true;
             }
-
+            labHole.Text = $"Hole: {game.currHole}";
 
 
         }

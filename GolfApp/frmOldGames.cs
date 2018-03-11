@@ -16,16 +16,18 @@ namespace GolfApp
         public frmOldGames(User u)
         {
             InitializeComponent();
-            user = u;
+            this.user = u;
 
         }
 
         private void frmOldGames_Load(object sender, EventArgs e)
         {
-            User user = new User();
-            List<Game> games = DBHelper.GetAllGamesByUser(user);
+            lstOldGames.Items.Clear();
+            List<Game> games = DBHelper.GetAllGamesByUser(user.UserId);
+
             foreach(Game g in games)
             {
+                MessageBox.Show(g.ToString());
                 lstOldGames.Items.Add(g.GameId);
             }
         }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.labHole = new System.Windows.Forms.Label();
-            this.txtHole = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnFinishGame = new System.Windows.Forms.Button();
@@ -64,13 +63,6 @@
             this.labHole.Size = new System.Drawing.Size(32, 13);
             this.labHole.TabIndex = 0;
             this.labHole.Text = "Hole:";
-            // 
-            // txtHole
-            // 
-            this.txtHole.Location = new System.Drawing.Point(50, 6);
-            this.txtHole.Name = "txtHole";
-            this.txtHole.Size = new System.Drawing.Size(48, 20);
-            this.txtHole.TabIndex = 1;
             // 
             // btnNext
             // 
@@ -359,7 +351,6 @@
             this.Controls.Add(this.btnFinishGame);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.txtHole);
             this.Controls.Add(this.labHole);
             this.Name = "frmNewGame";
             this.Text = "Game";
@@ -372,7 +363,6 @@
         #endregion
 
         private System.Windows.Forms.Label labHole;
-        private System.Windows.Forms.TextBox txtHole;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnFinishGame;
