@@ -13,6 +13,7 @@ namespace GolfApp
     {
         [Key]
         public int GameId { get; set; }
+
         [Required]
         public User UserId { get; set; }
         

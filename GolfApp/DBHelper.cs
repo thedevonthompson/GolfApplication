@@ -31,6 +31,8 @@ namespace GolfApp
             var db = new GolfDB();
             Game g = db.Games.Where(v => v.UserId.UserId == id).SingleOrDefault();
             return g;
+
+
         }
         
     }

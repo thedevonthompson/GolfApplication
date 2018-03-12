@@ -19,7 +19,7 @@ namespace GolfApp
         Game game = new Game();
 
         //create an empty user object
-        User user = new User();
+        User user;
 
         public Hole currHole = new Hole();
         //open new game form, pass the game and user in
@@ -37,7 +37,7 @@ namespace GolfApp
             //set the current hole to the 1st one
 
             labHole.Text = $"Hole: {numHole}";
-            game.UserId.UserId = user.UserId;
+            game.UserId = user;
         }
 
         private void UpdateForm()
@@ -54,16 +54,37 @@ namespace GolfApp
                 btnFinishGame.Visible = true;
             }
             labHole.Text = $"Hole: {numHole}";
-            
+
+            //ClearBoxes();
+        }
+
+        private void ClearBoxes()
+        {
+            lstDrive.ClearSelected();
+            lstFairway.ClearSelected();
+            lstGreenShots.ClearSelected();
+            lstTotalShots.ClearSelected();
         }
 
         private void btnFinishGame_Click(object sender, EventArgs e)
         {
             var db = new GolfDB();
 
+            db.Users.Attach(game.UserId);
+
             db.Games.Add(game);
 
-            db.SaveChanges();
+            if(db.SaveChanges() == 1)
+            {
+                MessageBox.Show("Game saved!");
+
+            }
+            else
+            {
+                MessageBox.Show("Something went wrong.");
+            }
+
+
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)

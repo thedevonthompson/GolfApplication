@@ -94,13 +94,9 @@
     <Compile Include="Game.cs" />
     <Compile Include="GolfDB.cs" />
     <Compile Include="Hole.cs" />
-    <Compile Include="Migrations\201803082002035_Initial.cs" />
-    <Compile Include="Migrations\201803082002035_Initial.Designer.cs">
-      <DependentUpon>201803082002035_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803120939007_Oh so much.cs" />
-    <Compile Include="Migrations\201803120939007_Oh so much.Designer.cs">
-      <DependentUpon>201803120939007_Oh so much.cs</DependentUpon>
+    <Compile Include="Migrations\201803121845319_Initial.cs" />
+    <Compile Include="Migrations\201803121845319_Initial.Designer.cs">
+      <DependentUpon>201803121845319_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -124,11 +120,8 @@
     <EmbeddedResource Include="frmViewGame.resx">
       <DependentUpon>frmViewGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803082002035_Initial.resx">
-      <DependentUpon>201803082002035_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803120939007_Oh so much.resx">
-      <DependentUpon>201803120939007_Oh so much.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803121845319_Initial.resx">
+      <DependentUpon>201803121845319_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

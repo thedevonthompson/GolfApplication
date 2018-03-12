@@ -29,10 +29,11 @@ namespace GolfApp
             User testUser = DBHelper.GetUserByUsername(txtUsername.Text);
             if (testUser == null)
             {
-                testUser.Username = txtUsername.Text;
-                testUser.Password = txtPassword.Text;
+                User saveUser = new User(); 
+                saveUser.Username = txtUsername.Text;
+                saveUser.Password = txtPassword.Text;
 
-                db.Users.Add(testUser);
+                db.Users.Add(saveUser);
                 if (db.SaveChanges() == 1)
                 {
                     MessageBox.Show("User saved!");
