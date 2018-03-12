@@ -44,6 +44,12 @@ namespace GolfApp
             frmRegister form = new frmRegister();
             form.ShowDialog();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmForgotPassword form = new frmForgotPassword();
+            form.ShowDialog();
+        }
     }
 
 
