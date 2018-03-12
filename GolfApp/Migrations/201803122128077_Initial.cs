@@ -12,11 +12,11 @@ namespace GolfApp.Migrations
                 c => new
                     {
                         GameId = c.Int(nullable: false, identity: true),
-                        UserId_UserId = c.Int(nullable: false),
+                        User_UserId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.GameId)
-                .ForeignKey("dbo.Users", t => t.UserId_UserId, cascadeDelete: true)
-                .Index(t => t.UserId_UserId);
+                .ForeignKey("dbo.Users", t => t.User_UserId, cascadeDelete: true)
+                .Index(t => t.User_UserId);
             
             CreateTable(
                 "dbo.Users",
@@ -46,8 +46,8 @@ namespace GolfApp.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Game", "UserId_UserId", "dbo.Users");
-            DropIndex("dbo.Game", new[] { "UserId_UserId" });
+            DropForeignKey("dbo.Game", "User_UserId", "dbo.Users");
+            DropIndex("dbo.Game", new[] { "User_UserId" });
             DropTable("dbo.Holes");
             DropTable("dbo.Users");
             DropTable("dbo.Game");

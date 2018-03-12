@@ -22,14 +22,14 @@ namespace GolfApp
         public static List<Game> GetAllGamesByUser(int id)
         {
             var db = new GolfDB();
-            List<Game> games = db.Games.Include("UserId").Where(g => g.UserId.UserId == id).ToList();
+            List<Game> games = db.Games.Include("UserId").Where(g => g.User.UserId == id).ToList();
             return games;
         }
         
         public static Game GetGameById(int id)
         {
             var db = new GolfDB();
-            Game g = db.Games.Where(v => v.UserId.UserId == id).SingleOrDefault();
+            Game g = db.Games.Where(v => v.User.UserId == id).SingleOrDefault();
             return g;
 
 

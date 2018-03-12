@@ -37,7 +37,7 @@ namespace GolfApp
             //set the current hole to the 1st one
 
             labHole.Text = $"Hole: {numHole}";
-            game.UserId = user;
+            game.User = user;
         }
 
         private void UpdateForm()
@@ -70,7 +70,7 @@ namespace GolfApp
         {
             var db = new GolfDB();
 
-            db.Users.Attach(game.UserId);
+            db.Users.Attach(game.User);
 
             db.Games.Add(game);
 

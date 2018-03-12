@@ -15,7 +15,7 @@ namespace GolfApp
         public int GameId { get; set; }
 
         [Required]
-        public User UserId { get; set; }
+        public User User { get; set; }
         
 
         public List<Hole> Holes = new List<Hole>();
@@ -27,7 +27,7 @@ namespace GolfApp
                 Hole h = new Hole();
                 this.Holes.Add(h);
             }
-            this.UserId = new User();
+            this.User = new User();
         }
 
         public static Game GetNewGame()
