@@ -17,13 +17,6 @@ namespace GolfApp
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            //open register form
-            frmRegister form = new frmRegister();
-            form.ShowDialog();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //Alright, let's log in
@@ -43,6 +36,19 @@ namespace GolfApp
                 this.Close();
             }
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //open register form
+            frmRegister form = new frmRegister();
+            form.ShowDialog();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmForgotPassword form = new frmForgotPassword();
+            form.ShowDialog();
         }
     }
 
