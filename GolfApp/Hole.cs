@@ -14,8 +14,6 @@ namespace GolfApp
         [Key]
         public int HoleId { get; set; }
 
-        public int HoleNum { get; set; }
-
         public int TotalShots { get; set; }
 
         public string DriveType { get; set; }
@@ -27,6 +25,11 @@ namespace GolfApp
         public int Par { get; set; }
 
         public int NumPutts { get; set; }
+
+        public Hole()
+        {
+
+        }
 
     }
 }

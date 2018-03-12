@@ -98,6 +98,10 @@
     <Compile Include="Migrations\201803082002035_Initial.Designer.cs">
       <DependentUpon>201803082002035_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803120939007_Oh so much.cs" />
+    <Compile Include="Migrations\201803120939007_Oh so much.Designer.cs">
+      <DependentUpon>201803120939007_Oh so much.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803082002035_Initial.resx">
       <DependentUpon>201803082002035_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803120939007_Oh so much.resx">
+      <DependentUpon>201803120939007_Oh so much.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
