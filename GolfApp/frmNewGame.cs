@@ -30,6 +30,7 @@ namespace GolfApp
             //set the current hole to the 1st one
             game.currHole = 1;
             labHole.Text = $"Hole: {game.currHole}";
+            Game currGame = Game.GetNewGame();
         }
 
         private void UpdateForm()
@@ -50,6 +51,9 @@ namespace GolfApp
 
         }
 
-        
+        private void btnFinishGame_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

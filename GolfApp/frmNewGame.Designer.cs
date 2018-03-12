@@ -90,6 +90,7 @@
             this.btnFinishGame.TabIndex = 4;
             this.btnFinishGame.Text = "Finish Game";
             this.btnFinishGame.UseVisualStyleBackColor = true;
+            this.btnFinishGame.Click += new System.EventHandler(this.btnFinishGame_Click);
             // 
             // radHook
             // 
