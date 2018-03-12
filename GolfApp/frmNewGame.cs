@@ -74,7 +74,9 @@ namespace GolfApp
 
             db.Games.Add(game);
 
-            if(db.SaveChanges() == 1)
+            int rowsAffected = db.SaveChanges();
+
+            if (rowsAffected == 2)
             {
                 MessageBox.Show("Game saved!");
 
