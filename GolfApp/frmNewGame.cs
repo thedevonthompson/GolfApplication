@@ -79,7 +79,7 @@ namespace GolfApp
             if (rowsAffected == 2)
             {
                 MessageBox.Show("Game saved!");
-
+                Close();
             }
             else
             {
