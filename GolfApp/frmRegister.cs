@@ -24,6 +24,10 @@ namespace GolfApp
             //create user to be saved
             User user = new User();
 
+            if (!IsValid())
+            {
+                return;
+            }
 
             //check to see if user is already present by username
             User testUser = DBHelper.GetUserByUsername(txtUsername.Text);
@@ -43,10 +47,21 @@ namespace GolfApp
             {
                 MessageBox.Show("User already exists!");
             }
-            
-    
+        }
 
-
+        private bool IsValid()
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                MessageBox.Show("Must enter a username");
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Must enter a password");
+                return false;
+            }
+            return true;
         }
 
         private void btnBackToLogin_Click(object sender, EventArgs e)
