@@ -44,6 +44,7 @@ namespace GolfApp
                 
                 Game g = DBHelper.GetGameById(x);
                 IndividualPlayerStats frm = new IndividualPlayerStats(g.GameId);
+                frm.ShowDialog();
             }
         }
     }
