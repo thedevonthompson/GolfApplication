@@ -27,7 +27,7 @@ namespace GolfApp
 
             foreach(Game g in games)
             {
-                MessageBox.Show(g.ToString());
+                //MessageBox.Show(g.ToString());
                 lstOldGames.Items.Add(g.GameId);
             }
         }
