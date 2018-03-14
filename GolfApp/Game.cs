@@ -55,5 +55,15 @@ namespace GolfApp
 
             return g;
         }
+
+        public List<int> GetListTotalShots()
+        {
+            List<int> shots = new List<int>();
+            foreach (Hole h in Holes)
+            {
+                shots.Add(h.TotalShots);
+            }
+            return shots;
+        }
     }
 }

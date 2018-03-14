@@ -43,7 +43,7 @@ namespace GolfApp
                 var x = (int)lstOldGames.SelectedItem;
                 
                 Game g = DBHelper.GetGameByGameId(x);
-                IndividualPlayerStats frm = new IndividualPlayerStats(g.GameId);
+                IndividualPlayerStats frm = new IndividualPlayerStats(g);
                 frm.ShowDialog();
             }
         }

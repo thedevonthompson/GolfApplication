@@ -12,27 +12,49 @@ namespace GolfApp
 {
     public partial class IndividualPlayerStats : Form
     {
-        private int gameId;
+        private Game game;
 
-        public IndividualPlayerStats(int gameId)
+        public IndividualPlayerStats(Game g)
         {
             InitializeComponent();
-            this.gameId = gameId;
+            game = g;
         }
 
         private void IndividualPlayerStats_Load(object sender, EventArgs e)
         {
-            GolfDB dB = new GolfDB();
-            Game g = dB.Games.Include("Holes").Where(a => a.GameId == gameId).SingleOrDefault();
-            List<Hole> holes = g.Holes;
-            int count = 1;
-            foreach (Hole H in holes)
-            {
-                this.chart1.Series[""].Points.AddXY(count, H.Par);
-                this.chart1.Series[""].Points.AddXY(count, H.TotalShots);
-                count++;
 
+            List<int> shots = game.GetListTotalShots();
+            List<Point> points = new List<Point>();
+
+            for (int i = 1; i <= shots.Count; i++)
+            {
+                points.Add(new Point(i, shots[i-1]));
             }
+
+            chart1.DataSource = points;
+
+            chart1.Series["Game"].XValueMember = "X";
+            chart1.Series["Game"].YValueMembers = "Y";
+
+            chart1.DataBind();
+
+            //chart1.DataSource = shots;
+            //chart1.DataBind();
+            //chart1.Series["Game"].Points.DataBind(points, "X", "Y", null);
+
+            //chart1.DataBindTable(points, "Shots");
+            //chart1.DataSource = shots;
+
+            //int count = 1;
+
+
+            //foreach (Hole H in holes)
+            //{
+            //    this.chart1.Series[""].Points.AddXY(count, H.Par);
+            //    this.chart1.Series[""].Points.AddXY(count, H.TotalShots);
+            //    count++;
+
+            //}
         }
     }
 }
