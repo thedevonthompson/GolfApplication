@@ -26,13 +26,18 @@ namespace GolfApp
             return games;
         }
         
-        public static Game GetGameById(int id)
+        public static Game GetGameByUserId(int id)
         {
             var db = new GolfDB();
             Game g = db.Games.Where(v => v.User.UserId == id).SingleOrDefault();
             return g;
+        }
 
-
+        public static Game GetGameByGameId(int id)
+        {
+            var db = new GolfDB();
+            Game g = db.Games.Where(game => game.GameId == id).SingleOrDefault();
+            return g;
         }
         
     }
